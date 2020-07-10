@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/kotaro/workspace/cpr_examples/build/_deps/cpr-src/include -I/home/kotaro/workspace/cpr_examples/build/_deps/curl-src/include -I/home/kotaro/workspace/cpr_examples/build/_deps/curl-build/include/curl 
+CXX_INCLUDES = -I/home/kotaro/workspace/cpr_examples/build/_deps/cpr-src/include -I/home/kotaro/workspace/cpr_examples/build/_deps/curl-src/include -I/home/kotaro/workspace/cpr_examples/build/_deps/curl-build/include/curl -I/home/kotaro/workspace/cpr_examples/build/_deps/json-src/single_include 
 

@@ -35,4 +35,5 @@ CMakeFiles/example.dir/main.cpp.o: _deps/curl-src/include/curl/multi.h
 CMakeFiles/example.dir/main.cpp.o: _deps/curl-src/include/curl/system.h
 CMakeFiles/example.dir/main.cpp.o: _deps/curl-src/include/curl/typecheck-gcc.h
 CMakeFiles/example.dir/main.cpp.o: _deps/curl-src/include/curl/urlapi.h
+CMakeFiles/example.dir/main.cpp.o: _deps/json-src/single_include/nlohmann/json.hpp
 

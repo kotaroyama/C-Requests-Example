@@ -429,6 +429,10 @@ FETCHCONTENT_SOURCE_DIR_CURL:PATH=
 FETCHCONTENT_SOURCE_DIR_GOOGLETEST:PATH=
 
 //When not empty, overrides where to find pre-populated content
+// for json
+FETCHCONTENT_SOURCE_DIR_JSON:PATH=
+
+//When not empty, overrides where to find pre-populated content
 // for mongoose
 FETCHCONTENT_SOURCE_DIR_MONGOOSE:PATH=
 
@@ -444,6 +448,9 @@ FETCHCONTENT_UPDATES_DISCONNECTED_CURL:BOOL=OFF
 //Enables UPDATE_DISCONNECTED behavior just for population of googletest
 FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLETEST:BOOL=OFF
 
+//Enables UPDATE_DISCONNECTED behavior just for population of json
+FETCHCONTENT_UPDATES_DISCONNECTED_JSON:BOOL=OFF
+
 //Enables UPDATE_DISCONNECTED behavior just for population of mongoose
 FETCHCONTENT_UPDATES_DISCONNECTED_MONGOOSE:BOOL=OFF
 
@@ -453,6 +460,15 @@ GENERATE_COVERAGE:BOOL=OFF
 //Enable installation of googletest. (Projects embedding googletest
 // may want to turn this OFF.)
 INSTALL_GTEST:BOOL=ON
+
+//Build the unit tests when BUILD_TESTING is enabled.
+JSON_BuildTests:BOOL=ON
+
+//Install CMake targets during install step.
+JSON_Install:BOOL=ON
+
+//Use non-amalgamated version of the library.
+JSON_MultipleHeaders:BOOL=OFF
 
 //Path to a file.
 LIBSSH2_INCLUDE_DIR:PATH=LIBSSH2_INCLUDE_DIR-NOTFOUND
@@ -468,6 +484,9 @@ MyProject_SOURCE_DIR:STATIC=/home/kotaro/workspace/cpr_examples
 
 //Path to a program.
 NROFF:FILEPATH=/usr/bin/nroff
+
+//Build libraries as shared libraries
+ON:BOOL=ON
 
 //Path to a library.
 OPENSSL_CRYPTO_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
@@ -576,6 +595,15 @@ mongoose_BINARY_DIR:STATIC=/home/kotaro/workspace/cpr_examples/build/_deps/mongo
 
 //Value Computed by CMake
 mongoose_SOURCE_DIR:STATIC=/home/kotaro/workspace/cpr_examples/build/_deps/mongoose-src
+
+//Value Computed by CMake
+nlohmann_json_BINARY_DIR:STATIC=/home/kotaro/workspace/cpr_examples/build/_deps/json-build
+
+//The directory containing a CMake configuration file for nlohmann_json.
+nlohmann_json_DIR:PATH=nlohmann_json_DIR-NOTFOUND
+
+//Value Computed by CMake
+nlohmann_json_SOURCE_DIR:STATIC=/home/kotaro/workspace/cpr_examples/build/_deps/json-src
 
 //Path to a library.
 pkgcfg_lib__OPENSSL_crypto:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
@@ -732,7 +760,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=15
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1235,6 +1263,7 @@ HTTP_ONLY:INTERNAL=ON
 LIBSSH2_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: LIBSSH2_LIBRARY
 LIBSSH2_LIBRARY-ADVANCED:INTERNAL=1
+NLOHMANN_JSON_CONFIG_INSTALL_DIR:INTERNAL=lib/cmake/nlohmann_json
 //Have library c
 NOT_NEED_LIBNSL:INTERNAL=1
 //ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY

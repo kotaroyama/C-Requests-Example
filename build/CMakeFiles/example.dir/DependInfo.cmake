@@ -13,6 +13,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "_deps/cpr-src/include"
   "_deps/curl-src/include"
   "_deps/curl-build/include/curl"
+  "_deps/json-src/single_include"
   )
 
 # Targets to which this target links.

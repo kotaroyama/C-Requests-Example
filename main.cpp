@@ -3,14 +3,25 @@
 #include <string>
 
 #include <cpr/cpr.h>
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
 
 int main(int argc, char** argv) {
-  cpr::Response r = cpr::Get(cpr::Url{"https://api.github.com/repos/whoshuu/cpr/contributors"},
-                    cpr::Authentication{"user", "pass"},
-                    cpr::Parameters{{"anon", "true"}, {"key", "value"}});
-  std::string text = r.text;      // JSON text string
+  std::string city = "Davis";
+  std::string state = "CA";
+  std::string api_key = "a748d4cee36119dedfc8827a2c6cb125";
 
-  std::cout << text << std::endl;
+  cpr::Response r = cpr::Get(
+    cpr::Url{"http://api.openweathermap.org/data/2.5/weather"},
+    cpr::Parameters{{"q", city}, {"appid", api_key}}
+  );
+
+  std::string text = r.text;      // JSON text string
+  
+  // Dealing with the JSON
+  json j = json::parse(text);
+  std::cout << j.dump(4) << std::endl;
 
   return 0;
 }

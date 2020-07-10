@@ -66,6 +66,7 @@ preinstall: _deps/cpr-build/preinstall
 # The main recursive "clean" target.
 clean: CMakeFiles/example.dir/clean
 clean: _deps/cpr-build/clean
+clean: _deps/json-build/clean
 
 .PHONY : clean
 
@@ -367,6 +368,24 @@ _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMake
 _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean
 
 .PHONY : _deps/googletest-build/googletest/clean
+
+#=============================================================================
+# Directory level rules for directory _deps/json-build
+
+# Recursive "all" directory target.
+_deps/json-build/all:
+
+.PHONY : _deps/json-build/all
+
+# Recursive "preinstall" directory target.
+_deps/json-build/preinstall:
+
+.PHONY : _deps/json-build/preinstall
+
+# Recursive "clean" directory target.
+_deps/json-build/clean:
+
+.PHONY : _deps/json-build/clean
 
 #=============================================================================
 # Directory level rules for directory _deps/mongoose-build
