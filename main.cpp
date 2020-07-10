@@ -5,7 +5,7 @@
 #include <cpr/cpr.h>
 #include <nlohmann/json.hpp>
 
-using json = nlohmann::json;
+using json = nlohmann::json
 
 int main(int argc, char** argv) {
   std::string city = "Davis";
