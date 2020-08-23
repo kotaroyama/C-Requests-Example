@@ -47,6 +47,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/googletest-src/googletest/cmake/internal_utils.cmake"
   "_deps/json-src/CMakeLists.txt"
   "_deps/json-src/cmake/config.cmake.in"
+  "_deps/json-src/cmake/nlohmann_jsonConfigVersion.cmake.in"
   "_deps/mongoose-src/CMakeLists.txt"
   "/usr/share/cmake-3.16/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
   "/usr/share/cmake-3.16/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"

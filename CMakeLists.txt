@@ -9,9 +9,7 @@ FetchContent_Declare(cpr GIT_REPOSITORY https://github.com/whoshuu/cpr.git)
 FetchContent_MakeAvailable(cpr)
 
 # Add JSON
-FetchContent_Declare(json
-  GIT_REPOSITORY https://github.com/nlohmann/json.git
-  GIT_TAG v3.7.3)
+FetchContent_Declare(json GIT_REPOSITORY https://github.com/nlohmann/json.git)
 
 FetchContent_GetProperties(json)
 if(NOT json_POPULATED)

@@ -353,8 +353,6 @@ algorithm
 -
 cassert
 -
-ciso646
--
 cstddef
 -
 functional
@@ -381,8 +379,6 @@ algorithm
 -
 array
 -
-ciso646
--
 forward_list
 -
 iterator
@@ -401,6 +397,8 @@ utility
 -
 valarray
 -
+ciso646
+-
 exception
 -
 stdexcept
@@ -417,13 +415,9 @@ stdint.h
 -
 cstdlib
 -
-ciso646
--
 cstddef
 -
 type_traits
--
-ciso646
 -
 limits
 -
@@ -447,8 +441,6 @@ vector
 -
 array
 -
-ciso646
--
 cstddef
 -
 cstdint
@@ -456,8 +448,6 @@ cstdint
 string
 -
 algorithm
--
-ciso646
 -
 iterator
 -
@@ -480,6 +470,12 @@ iterator
 string
 -
 tuple
+-
+cstdint
+-
+tuple
+-
+utility
 -
 algorithm
 -
@@ -581,8 +577,6 @@ cstddef
 -
 limits
 -
-ciso646
--
 iterator
 -
 type_traits
@@ -623,6 +617,8 @@ limits
 -
 string
 -
+cmath
+-
 algorithm
 -
 cstddef
@@ -645,8 +641,6 @@ array
 -
 cassert
 -
-ciso646
--
 clocale
 -
 cmath
@@ -668,8 +662,6 @@ utility
 array
 -
 cassert
--
-ciso646
 -
 cmath
 -
